@@ -1,11 +1,12 @@
-#include "widget.h"
-
+#include "mainwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication a(argc, argv);
-    Widget w;
+    MainWindow w;
     w.show();
+
     return a.exec();
 }
